@@ -1,1 +1,28 @@
-{"name":"niutax","displayName":"Niutax","version":"0.1.0","description":"Contabilidad, impuestos, facturación y gastos para empresas chilenas y estudios contables sobre el ecosistema Niutax: conciliación bancaria, clasificación de compras, F29, alertas del SII, emisión de DTE y rendición de gastos.","author":{"name":"Niutax SpA","url":"https://niutax.cl"},"homepage":"https://niutax.cl/contabilidad-con-ia","license":"Apache-2.0","keywords":["niutax","contabilidad","chile","sii","f29","facturacion-electronica","conciliacion-bancaria","mcp"],"privacyPolicyUrl":"https://niutax.cl/privacidad","icon":".claude-plugin/icon.png"}
+{
+  "name": "niutax",
+  "displayName": "Niutax",
+  "version": "0.1.0",
+  "description": "Contabilidad, impuestos, facturación y gastos para empresas chilenas y estudios contables sobre el ecosistema Niutax: conciliación bancaria, clasificación de compras, F29, alertas del SII, emisión de DTE y rendición de gastos.",
+  "author": {
+    "name": "Niutax SpA",
+    "url": "https://niutax.cl"
+  },
+  "homepage": "https://niutax.cl/contabilidad-con-ia",
+  "license": "Apache-2.0",
+  "keywords": [
+    "niutax",
+    "contabilidad",
+    "chile",
+    "sii",
+    "f29",
+    "facturacion-electronica",
+    "conciliacion-bancaria",
+    "mcp"
+  ],
+  "privacyPolicyUrl": "https://niutax.cl/privacidad",
+  "icon": ".claude-plugin/icon.png",
+  "repository": "https://github.com/niutax/niutax-claude-plugin",
+  "supportUrl": "https://niutax.cl",
+  "documentationUrl": "https://fin.niu.tax/mcp/guia",
+  "termsOfServiceUrl": "https://niutax.cl/terminos-y-condiciones"
+}
