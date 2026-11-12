@@ -13,6 +13,7 @@ Herramientas de Niutax Finanzas: `balance-clasificado`, `estado-resultados`, `es
 - Montos en pesos chilenos salvo que el dato indique otra moneda.
 - Antes de presentar, comprueba que el balance cuadra (activo = pasivo + patrimonio). Si no cuadra, dilo y sugiere revisar con `balance-ocho-columnas`.
 - Si la contabilidad del período parece incompleta (mes sin movimientos, cartola sin conciliar), adviértelo antes de las conclusiones.
+- Si la empresa trabaja con centros de costo y hay ingresos o costos en "Sin centro de costo", adviértelo con el monto: el resultado por proyecto está incompleto.
 
 ## Pasos
 
@@ -21,6 +22,7 @@ Herramientas de Niutax Finanzas: `balance-clasificado`, `estado-resultados`, `es
    - **Salud del negocio** (por defecto): balance clasificado, estado de resultados con comparativo, flujo de caja histórico, cuentas por cobrar y por pagar.
    - **Real vs presupuesto**: estado de resultados + `consultar-presupuesto`.
    - **Holding**: `comparativo-mensual-holding`.
+   - **Por proyecto o centro de costo**: carga `resultado-por-proyecto`.
 3. Calcula indicadores sobre esas cifras: margen bruto y neto, liquidez corriente, endeudamiento, días de cobro y pago, EBITDA si las cuentas lo permiten.
 4. Entrega:
    - En el chat: 3 a 5 conclusiones en lenguaje simple y la cifra que respalda cada una.

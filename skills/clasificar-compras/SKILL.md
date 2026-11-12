@@ -5,7 +5,7 @@ description: Clasifica los documentos pendientes de los libros de compras, venta
 
 # Clasificar libros
 
-Herramientas de Niutax Finanzas: `listar-libro-compras`, `listar-libro-ventas`, `listar-libro-honorarios`, `resumen-libro-compras`, `plan-de-cuentas`, `clasificar-compras`, `clasificar-ventas`, `clasificar-honorarios`, `consultar-propuestas`.
+Herramientas de Niutax Finanzas: `listar-libro-compras`, `listar-libro-ventas`, `listar-libro-honorarios`, `resumen-libro-compras`, `libro-mayor`, `estado-resultados-gestion`, `plan-de-cuentas`, `clasificar-compras`, `clasificar-ventas`, `clasificar-honorarios`, `consultar-propuestas`.
 
 ## Reglas de base
 
@@ -18,11 +18,12 @@ Herramientas de Niutax Finanzas: `listar-libro-compras`, `listar-libro-ventas`, 
 ## Pasos
 
 1. Empresa (carga `elegir-empresa` si falta), libro (compras por defecto) y mes. Termina el turno si falta algo.
-2. Llama `listar-libro-*` del mes y quédate con los documentos sin clasificar. Si no hay, dilo y termina.
-3. Carga el `plan-de-cuentas`. Para cada proveedor, revisa si en meses anteriores ya se clasificó (mismo RUT) y repite esa cuenta; si es nuevo, propone por el giro o la glosa. Marca "revisar" cuando no haya historial.
-4. Muestra una tabla agrupada por proveedor: RUT, razón social, tipo y folio, monto a distribuir, cuenta, centro de costo, confianza. Si un documento se reparte entre cuentas, muestra cada línea.
-5. Pregunta si envía. Con el sí, llama `clasificar-*` en lotes de hasta 100 documentos.
-6. Cierra en una línea: documentos enviados, pendientes que quedan y que deben aprobarse en Aprobaciones IA.
+2. **¿La empresa trabaja con centros de costo?** Llama `estado-resultados-gestion` (tipo `anual`, desglose `cc-detalle`) y mira `centros_de_costo_disponibles`. Si hay centros además de "Sin centro de costo" carga `clasificar-por-proyecto` y sigue ahí, sea el libro de compras, honorarios o ventas: esa skill también encuentra los documentos ya contabilizados que quedaron sin centro de costo.
+3. Llama `listar-libro-*` del mes y quédate con los documentos sin clasificar. Si no hay, dilo y termina.
+4. Carga el `plan-de-cuentas`. Para el historial, usa `libro-mayor` en modo `analitico` de los meses anteriores: trae por movimiento el RUT del tercero, la cuenta y el centro de costo. Repite la cuenta que ya se usó con ese RUT; si es nuevo, propone por el giro o la razón social. Marca "revisar" cuando no haya historial.
+5. Muestra una tabla agrupada por proveedor: RUT, razón social, tipo y folio, monto a distribuir, cuenta, centro de costo, confianza. Si un documento se reparte entre cuentas, muestra cada línea.
+6. Pregunta si envía. Con el sí, llama `clasificar-*` en lotes de hasta 100 documentos.
+7. Cierra en una línea: documentos enviados, pendientes que quedan y que deben aprobarse en Aprobaciones IA.
 
 ## Cuando otra skill carga esta
 

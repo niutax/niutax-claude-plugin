@@ -33,6 +33,7 @@ Elige **uno** según el estado:
 |---|---|
 | Movimientos de cartola sin conciliar | `conciliar-banco` |
 | Documentos de compras sin clasificar | `clasificar-compras` |
+| Empresa con centros de costo y compras, honorarios o ventas sin centro asignado | `clasificar-por-proyecto` |
 | F29 del último mes sin declarar, observado o con alertas | `mes-tributario` |
 | Anotaciones, giros o DJ pendientes | `contingencias-sii` |
 | Todo al día | `reportes-financieros` (salud del negocio) |

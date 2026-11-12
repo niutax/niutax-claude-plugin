@@ -27,9 +27,11 @@ Política de privacidad: https://niutax.cl/privacidad
 |---|---|
 | `/niutax:inicio` | Primer uso: conecta, elige empresa, diagnostica y propone un paso |
 | `/niutax:elegir-empresa` | Elige empresa o RUT y la reconoce en los cuatro módulos |
-| `/niutax:conciliar-banco` | Carga cartola, propone imputaciones y concilia |
+| `/niutax:conciliar-banco` | Recaudación y pagos: carga cartola, calza pagos con facturas, registra y cruza anticipos, concilia |
 | `/niutax:clasificar-compras` | Clasifica libros de compras, ventas y honorarios |
+| `/niutax:clasificar-por-proyecto` | Asigna cuenta y centro de costo a compras, honorarios y ventas de empresas que trabajan por proyecto |
 | `/niutax:reportes-financieros` | Balance, EERR, flujo, indicadores, real vs presupuesto |
+| `/niutax:resultado-por-proyecto` | EERR por centro de costo y provisión de ingresos según contrato |
 | `/niutax:mes-tributario` | F29 de un RUT o de toda la cartera |
 | `/niutax:contingencias-sii` | Anotaciones, observaciones, deudas y DJ pendientes |
 | `/niutax:emitir-documento` | Factura, boleta, nota de crédito/débito, guía |
@@ -40,4 +42,5 @@ Política de privacidad: https://niutax.cl/privacidad
 
 - **Nada se aplica sin aprobación humana.** Claude muestra lo que propone, espera un sí y deja la propuesta en el panel para que una persona la apruebe.
 - **Solo cifras de Niutax.** Los reportes usan únicamente datos que devuelven los conectores.
+- **Cada compra, honorario y venta lleva cuenta y centro de costo.** En empresas que trabajan por proyecto, "sin centro de costo" significa "falta clasificar", y el cierre del mes lo controla.
 - **La empresa se reconoce por RUT** entre módulos; los identificadores internos nunca se muestran.
