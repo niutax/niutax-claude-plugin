@@ -1,8 +1,8 @@
 {
   "name": "niutax",
   "displayName": "Niutax",
-  "version": "0.2.0",
-  "description": "Contabilidad, impuestos, facturación y gastos para empresas chilenas y estudios contables sobre el ecosistema Niutax: conciliación bancaria con anticipos de clientes y proveedores, clasificación de compras, honorarios y ventas con centro de costo, resultado por proyecto, F29, alertas del SII, emisión de DTE y rendición de gastos.",
+  "version": "0.3.0",
+  "description": "Contabilidad, impuestos, remuneraciones, facturación y gastos para empresas chilenas y estudios contables sobre el ecosistema Niutax: conciliación bancaria con anticipos de clientes y proveedores, clasificación de compras, honorarios y ventas con centro de costo, resultado por proyecto, F29, alertas del SII, liquidaciones y Previred, emisión de DTE y rendición de gastos.",
   "author": {
     "name": "Niutax SpA",
     "url": "https://niutax.cl"
@@ -19,7 +19,9 @@
     "conciliacion-bancaria",
     "mcp",
     "centros-de-costo",
-    "proyectos"
+    "proyectos",
+    "remuneraciones",
+    "payroll"
   ],
   "privacyPolicyUrl": "https://niutax.cl/privacidad",
   "icon": ".claude-plugin/icon.png",

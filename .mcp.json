@@ -1,1 +1,29 @@
-{"mcpServers":{"niutax-finanzas":{"type":"http","url":"https://fin.niu.tax/mcp/empresa","description":"Niutax Finanzas: contabilidad de la empresa (balances, estados de resultados, libros de compras, ventas y honorarios, cartola y conciliación bancaria, comprobantes, presupuestos)."},"niutax-tributario":{"type":"http","url":"https://tax.niu.tax/mcp","description":"Niutax Tributario: gestión tributaria de la cartera (F29, F22, declaraciones juradas, alertas y anotaciones del SII, vencimientos). Solo lectura."},"niutax-facturacion":{"type":"http","url":"https://pos.niu.tax/mcp/empresa","description":"Niutax Facturación (niupos): emisión de facturas, boletas, notas de crédito y débito y guías de despacho; clientes, productos, ventas e inventario."},"niutax-gastos":{"type":"http","url":"https://niugastos.com/mcp","description":"Niutax Gastos (NiuGastos): registro y rendición de gastos con su categoría y medio de pago."}}}
+{
+  "mcpServers": {
+    "niutax-finanzas": {
+      "type": "http",
+      "url": "https://fin.niu.tax/mcp/empresa",
+      "description": "Niutax Finanzas: contabilidad de la empresa (balances, estados de resultados, libros de compras, ventas y honorarios, cartola y conciliación bancaria, comprobantes, presupuestos)."
+    },
+    "niutax-tributario": {
+      "type": "http",
+      "url": "https://tax.niu.tax/mcp",
+      "description": "Niutax Tributario: gestión tributaria de la cartera (F29, F22, declaraciones juradas, alertas y anotaciones del SII, vencimientos). Consulta y deja propuestas de F29, F22 y DJ que se aprueban en Niutax."
+    },
+    "niutax-facturacion": {
+      "type": "http",
+      "url": "https://pos.niu.tax/mcp/empresa",
+      "description": "Niutax Facturación (niupos): emisión de facturas, boletas, notas de crédito y débito y guías de despacho; clientes, productos, ventas e inventario."
+    },
+    "niutax-gastos": {
+      "type": "http",
+      "url": "https://niugastos.com/mcp",
+      "description": "Niutax Gastos (NiuGastos): registro y rendición de gastos con su categoría y medio de pago."
+    },
+    "niutax-payroll": {
+      "type": "http",
+      "url": "https://hr.niu.tax/mcp",
+      "description": "Niutax Payroll: remuneraciones y recursos humanos (trabajadores, novedades y eventos del mes, liquidaciones, Previred, vacaciones, documentos y horas por proyecto). Deja propuestas que se aprueban en el panel de Payroll."
+    }
+  }
+}

@@ -6,7 +6,7 @@
 
 ## Si ya tienes los conectores de Niutax
 
-Si ya conectaste Niutax Finanzas, Tributario, Niupos o NiuGastos en Configuración → Conectores, no agregues otra vez los conectores del plugin: Claude vería cada herramienta dos veces. El plugin aporta las skills igual.
+Si ya conectaste Niutax Finanzas, Tributario, RRHH (Payroll), Niupos o NiuGastos en Configuración → Conectores, no agregues otra vez los conectores del plugin: Claude vería cada herramienta dos veces. El plugin aporta las skills igual.
 
 ## Permisos
 

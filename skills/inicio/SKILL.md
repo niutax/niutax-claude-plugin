@@ -1,6 +1,6 @@
 ---
 name: inicio
-description: Primer paso con Niutax en Claude. Revisa qué módulos están conectados, elige la empresa, diagnostica su configuración y propone un solo siguiente paso (conciliar, clasificar compras, revisar el F29 o ver los estados financieros). Usar cuando el usuario dice "empecemos", "configura Niutax", "qué puedes hacer con Niutax", "/niutax:inicio", o es su primera conversación con el plugin.
+description: Primer paso con Niutax en Claude. Revisa qué módulos están conectados, elige la empresa, diagnostica su configuración y propone un solo siguiente paso (conciliar, clasificar compras, revisar el F29, avanzar las remuneraciones o ver los estados financieros). Usar cuando el usuario dice "empecemos", "configura Niutax", "qué puedes hacer con Niutax", "/niutax:inicio", o es su primera conversación con el plugin.
 ---
 
 # Inicio con Niutax
@@ -9,7 +9,7 @@ Deja al usuario conectado, con una empresa elegida y con un siguiente paso claro
 
 ## 1. Revisar conexiones
 
-Comprueba qué conectores de Niutax responden: Finanzas, Tributario, Facturación y Gastos. Si alguno no está disponible o pide inicio de sesión, llama una herramienta de lectura de ese módulo para que aparezca su tarjeta de conexión. Si no aparece, indica que lo conecte en Configuración → Conectores. Sigue con los módulos que sí estén.
+Comprueba qué conectores de Niutax responden: Finanzas, Tributario, Payroll, Facturación y Gastos. Si alguno no está disponible o pide inicio de sesión, llama una herramienta de lectura de ese módulo para que aparezca su tarjeta de conexión. Si no aparece, indica que lo conecte en Configuración → Conectores. Sigue con los módulos que sí estén.
 
 Muestra una línea por módulo: conectado o no conectado. Nada más.
 
@@ -22,8 +22,9 @@ Carga la skill `elegir-empresa`. Con un estudio contable (muchos RUT en la carte
 En paralelo, cuando el módulo esté conectado:
 - Finanzas: `diagnostico-empresa` (sin área, revisa todo).
 - Tributario: `diagnostico-rut` y `resumen-de-hoy` con el RUT.
+- Payroll: `diagnostico-empresa` y `estado-del-mes` con el RUT, si la empresa tiene trabajadores en Payroll.
 
-Resume en máximo 5 líneas lo que falta configurar (clave SII, plan de cuentas, cuentas bancarias, cartola, F29 automático) con la pantalla del panel donde se arregla. No inventes causas que el diagnóstico no muestra.
+Resume en máximo 5 líneas lo que falta configurar (clave SII, plan de cuentas, cuentas bancarias, cartola, F29 automático, ficha de la empresa o trabajadores en Payroll) con la pantalla del panel donde se arregla. No inventes causas que el diagnóstico no muestra.
 
 ## 4. Proponer un siguiente paso
 
@@ -36,6 +37,7 @@ Elige **uno** según el estado:
 | Empresa con centros de costo y compras, honorarios o ventas sin centro asignado | `clasificar-por-proyecto` |
 | F29 del último mes sin declarar, observado o con alertas | `mes-tributario` |
 | Anotaciones, giros o DJ pendientes | `contingencias-sii` |
+| Liquidaciones del mes sin calcular, sin cerrar o sin pasar a Contabilidad | `mes-remuneraciones` |
 | Todo al día | `reportes-financieros` (salud del negocio) |
 
 Pregunta si lo hacen ahora. Con un sí, carga esa skill con la empresa ya elegida.

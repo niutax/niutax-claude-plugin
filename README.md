@@ -1,11 +1,12 @@
 # Niutax para Claude
 
-Contabilidad, impuestos, facturación y gastos de empresas chilenas en Claude, sobre el ecosistema Niutax. Cada módulo es un conector propio:
+Contabilidad, impuestos, remuneraciones, facturación y gastos de empresas chilenas en Claude, sobre el ecosistema Niutax. Cada módulo es un conector propio:
 
 | Conector | Qué hace | Escribe |
 |---|---|---|
 | Niutax Finanzas | Contabilidad: libros, cartola, conciliación, comprobantes, EEFF, presupuesto | Propuestas que se aprueban en Aprobaciones IA |
-| Niutax Tributario | F29, F22, DJ, alertas y anotaciones del SII, vencimientos | No (solo lectura) |
+| Niutax Tributario | F29, F22, DJ, alertas y anotaciones del SII, vencimientos | Propuestas de F29, F22 y DJ que se aprueban en Niutax |
+| Niutax Payroll | Trabajadores, novedades del mes, liquidaciones, Previred, vacaciones, documentos, horas por proyecto | Propuestas que se aprueban en el panel de Payroll |
 | Niutax Facturación | Facturas, boletas, notas, guías, clientes, productos, ventas | Propuestas que se aprueban en niupos |
 | Niutax Gastos | Registro y rendición de gastos | Gastos pendientes |
 
@@ -26,7 +27,7 @@ Política de privacidad: https://niutax.cl/privacidad
 | Skill | Para qué |
 |---|---|
 | `/niutax:inicio` | Primer uso: conecta, elige empresa, diagnostica y propone un paso |
-| `/niutax:elegir-empresa` | Elige empresa o RUT y la reconoce en los cuatro módulos |
+| `/niutax:elegir-empresa` | Elige empresa o RUT y la reconoce en los cinco módulos |
 | `/niutax:conciliar-banco` | Recaudación y pagos: carga cartola, calza pagos con facturas, registra y cruza anticipos, concilia |
 | `/niutax:clasificar-compras` | Clasifica libros de compras, ventas y honorarios |
 | `/niutax:clasificar-por-proyecto` | Asigna cuenta y centro de costo a compras, honorarios y ventas de empresas que trabajan por proyecto |
@@ -34,6 +35,7 @@ Política de privacidad: https://niutax.cl/privacidad
 | `/niutax:resultado-por-proyecto` | EERR por centro de costo y provisión de ingresos según contrato |
 | `/niutax:mes-tributario` | F29 de un RUT o de toda la cartera |
 | `/niutax:contingencias-sii` | Anotaciones, observaciones, deudas y DJ pendientes |
+| `/niutax:mes-remuneraciones` | Novedades, eventos, horas, liquidaciones, Previred y paso a Contabilidad, por empresa o para toda la cartera |
 | `/niutax:emitir-documento` | Factura, boleta, nota de crédito/débito, guía |
 | `/niutax:registrar-gasto` | Rinde boletas y facturas desde fotos |
 | `/niutax:cierre-mensual` | Recorre el cierre del mes con todos los módulos |
